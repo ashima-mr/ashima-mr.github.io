@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ashima M.R.'s Portfolio</title>
   <style>
     :root {
       --bg-color: #f3f2ee;
       --text-color: #1a1a1a;
       --accent-color: #bbb;
-      --font-main: 'Courier New', Courier, monospace;
+      --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
 
     body {
@@ -21,37 +21,42 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 2rem;
+      padding: 1rem;
     }
 
     header {
       text-align: center;
-      margin-bottom: 2rem;
+      padding: 3rem 1rem 2rem;
+      max-width: 1000px;
     }
 
     header h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.2rem;
+      font-weight: 400;
+      margin: 0 0 0.5rem;
+      line-height: 1.3;
+      word-break: break-word;
     }
 
     header p {
-      font-size: 1rem;
+      font-size: 1.125rem;
       color: var(--accent-color);
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     .banner-photo {
-      width: 100%;
-      max-width: 700px;
+      width: 90vw;
+      max-width: 600px;
       height: auto;
-      display: block;
-      margin: 0 auto 2rem auto;
+      border-radius: 10px;
       object-fit: cover;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     }
 
     main {
       max-width: 700px;
       width: 100%;
+      padding: 0 1rem;
     }
 
     section {
@@ -63,6 +68,7 @@
     h2 {
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
+      font-weight: 500;
     }
 
     ul {
@@ -78,6 +84,17 @@
       margin-top: 4rem;
       font-size: 0.875rem;
       color: var(--accent-color);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    @media screen and (min-height: 700px) {
+      header {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -85,7 +102,7 @@
   <header>
     <h1>Ashima Fatima Seik Mugibur Raghman</h1>
     <p>Computer Science Graduate. Focused on Data & Machine Learning Systems.</p>
-    <img src="assets/profile.jpg" alt="Professional photo" class="banner-photo">
+    <img src="assets/profile.jpg" alt="Professional photo" class="banner-photo" />
   </header>
 
   <main>
@@ -97,8 +114,8 @@
     <section>
       <h2>Projects</h2>
       <ul>
-        <li><strong>Project Name 1</strong> - Brief description of the project and your role in it.</li>
-        <li><strong>Project Name 2</strong> - Another brief description with tech stack if needed.</li>
+        <li><strong>Project Name 1</strong> – Brief description of the project and your role in it.</li>
+        <li><strong>Project Name 2</strong> – Another brief description with tech stack if needed.</li>
       </ul>
     </section>
 
