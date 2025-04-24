@@ -24,13 +24,16 @@
       padding: 1rem;
     }
 
+    /* Header styling: center text at the top */
     header {
       text-align: center;
       padding: 1rem 1rem 2rem;
       max-width: 1000px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width: 100%;
+    }
+
+    .header-text {
+      margin-bottom: 2rem;
     }
 
     header h1 {
@@ -47,12 +50,20 @@
       margin-bottom: 2rem;
     }
 
+    /* Container for the images (banner photo + side images) */
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem; /* Space between the images */
+      margin-bottom: 2rem; /* Added space below the images */
+    }
+
+    /* Professional photo styling */
     .banner-photo {
       width: 25vw;
       max-width: 600px;
       height: auto;
-      display: block;
-      margin: 0 2rem;
       object-fit: cover;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     }
@@ -62,12 +73,13 @@
       position: relative;
       display: inline-block;
       width: 200px; /* Adjust size as needed */
-      height: auto;
+      height: 100%;
     }
 
+    /* Ensure the side images are the same height as the professional photo */
     .image-side img {
       width: 100%;
-      height: auto;
+      height: 100%; /* Make the height the same as the professional photo */
       object-fit: cover;
       border: 2px solid var(--accent-color);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -112,6 +124,14 @@
 </head>
 <body>
   <header>
+    <div class="header-text">
+      <h1>Ashima Fatima Seik Mugibur Raghman</h1>
+      <p>Computer Science Graduate. Focused on Data & Machine Learning Systems.</p>
+    </div>
+  </header>
+
+  <!-- Container for images (side images + professional photo) -->
+  <div class="image-container">
     <!-- Left image -->
     <div class="image-side">
       <img src="assets/image1.jpg" alt="Left-side image" />
@@ -124,7 +144,7 @@
     <div class="image-side">
       <img src="assets/image2.jpg" alt="Right-side image" />
     </div>
-  </header>
+  </div>
 
   <main>
     <section>
