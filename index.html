@@ -73,7 +73,7 @@
       position: relative;
       display: inline-block;
       width: 200px; /* Adjust size as needed */
-      height: 100%; /* Ensure height takes full space */
+      height: 100%;
     }
 
     /* Ensure the side images are the same height as the professional photo */
@@ -170,5 +170,19 @@
   <footer>
     <p>Built with pure HTML & CSS. Inspired by Braun and old web aesthetics.</p>
   </footer>
+
+  <script>
+    window.onload = function() {
+      console.log("Page is fully loaded!");
+      // Get the height of the professional photo
+      const bannerPhotoHeight = document.querySelector('.banner-photo').offsetHeight;
+
+      // Set the height of the side images
+      const sideImages = document.querySelectorAll('.image-side img');
+      sideImages.forEach(image => {
+        image.style.height = bannerPhotoHeight + 'px';
+      });
+    };
+  </script>
 </body>
 </html>
