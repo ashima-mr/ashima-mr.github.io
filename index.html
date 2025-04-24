@@ -28,6 +28,9 @@
       text-align: center;
       padding: 1rem 1rem 2rem;
       max-width: 1000px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     header h1 {
@@ -49,17 +52,31 @@
       max-width: 600px;
       height: auto;
       display: block;
-      margin: 0 auto 2rem auto;
+      margin: 0 2rem;
       object-fit: cover;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style for the image containers on the left and right */
+    .image-side {
+      position: relative;
+      display: inline-block;
+      width: 200px; /* Adjust size as needed */
+      height: auto;
+    }
+
+    .image-side img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border: 2px solid var(--accent-color);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     main {
       max-width: 700px;
       width: 100%;
       padding: 0 1rem;
-      display: flex;
-      flex-direction: column;
     }
 
     section {
@@ -91,92 +108,44 @@
       padding: 2rem 1rem;
     }
 
-    /* Content Wrapper to display side-by-side */
-    .content-wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      max-width: 1000px;
-      width: 100%;
-    }
-
-    /* Left and Right Collage Layout */
-    .image-collage {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 16px;
-      max-width: 300px; /* Limit the size of the collage */
-      width: 100%;
-    }
-
-    .image-collage img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border: 2px solid var(--accent-color);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Add specific layout to place images on both sides */
-    .left-collage {
-      order: -1; /* Moves left collage to the left side */
-    }
-
-    /* Styling for larger screens */
-    @media (min-width: 900px) {
-      .content-wrapper {
-        max-width: 1200px;
-        width: 100%;
-        gap: 3rem; /* Add space between the two collages and the main content */
-      }
-
-      main {
-        flex: 1;
-      }
-    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Ashima Fatima Seik Mugibur Raghman</h1>
-    <p>Computer Science Graduate. Focused on Data & Machine Learning Systems.</p>
+    <!-- Left image -->
+    <div class="image-side">
+      <img src="assets/image1.jpg" alt="Left-side image" />
+    </div>
+
+    <!-- Professional photo -->
     <img src="assets/profile.jpg" alt="Professional photo" class="banner-photo" />
+
+    <!-- Right image -->
+    <div class="image-side">
+      <img src="assets/image2.jpg" alt="Right-side image" />
+    </div>
   </header>
 
-  <!-- Content Wrapper: Holds main content and image collages -->
-  <div class="content-wrapper">
-    <!-- Left Collage -->
-    <div class="image-collage left-collage">
-      <img src="assets/image1.jpg" alt="Image 1" />
-    </div>
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>I’m a recent CS graduate passionate about ML, cryptography, and old-school web design. This portfolio reflects my appreciation for minimal and classic design styles.</p>
+    </section>
 
-    <!-- Main Content -->
-    <main>
-      <section>
-        <h2>About Me</h2>
-        <p>I’m a recent CS graduate passionate about ML, cryptography, and old-school web design. This portfolio reflects my appreciation for minimal and classic design styles.</p>
-      </section>
+    <section>
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Project Name 1</strong> – Brief description of the project and your role in it.</li>
+        <li><strong>Project Name 2</strong> – Another brief description with tech stack if needed.</li>
+      </ul>
+    </section>
 
-      <section>
-        <h2>Projects</h2>
-        <ul>
-          <li><strong>Project Name 1</strong> – Brief description of the project and your role in it.</li>
-          <li><strong>Project Name 2</strong> – Another brief description with tech stack if needed.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-      </section>
-    </main>
-
-    <!-- Right Collage -->
-    <div class="image-collage">
-      <img src="assets/image2.jpg" alt="Image 2" />
-    </div>
-  </div>
+    <section>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+    </section>
+  </main>
 
   <footer>
     <p>Built with pure HTML & CSS. Inspired by Braun and old web aesthetics.</p>
